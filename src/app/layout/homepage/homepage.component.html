@@ -1,0 +1,45 @@
+<div class="background">
+
+    <div class="profile">
+      <div class="profiletest">
+        <img [src]="avatar.avatar" 
+        class="imagessize"/>
+      </div>
+    
+      <div class="name">
+        <b>{{avatar.name}}</b>
+      </div>
+  
+      <div class="job">
+        <p>{{avatar.job }}</p>
+      </div>
+  
+      <div class="box">
+        <div class="followers">
+          <p>{{avatar.followers | Formatnumber}}</p>
+          <p>followers</p>
+        </div>
+  
+        <div class="ked"></div>
+  
+        <div class="following">
+          <p>{{avatar.following | Formatnumber}}</p>
+          <p>following</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="task-container">
+    <div *ngFor="let task of tasks" class="task-box" (click)="detail(task)">
+      <p>{{ task.name }}</p>
+      <p>Date: {{ task.date | date: 'short' }}</p>
+    </div>
+  </div>
+  
+  <div class="box2">
+    <div class="taskremain">
+      <p>10 Task remain</p>
+    </div>
+  </div>
+  
